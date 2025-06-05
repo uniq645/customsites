@@ -199,11 +199,20 @@
 </button>
 
     <!-- CTA Button -->
-    <p class="button-custom order-lg-last mb-0 ms-auto">
-      <a href="./index.html#appointment" class="btn btn-outline-warning py-2 px-3 fw-semibold rounded-pill shadow-sm">
-        Book Appointment
-      </a>
-    </p>
+<p class="button-custom order-lg-last mb-0 ms-auto">
+  <a href="#appointment" 
+     class="btn py-2 px-3 fw-semibold rounded-pill shadow-sm"
+     style="
+       color: #fd7e14;
+       background-color: transparent;
+       border: 2px solid #fd7e14;
+       transition: all 0.3s ease;
+     "
+     onmouseover="this.style.backgroundColor='rgba(253, 126, 20, 0.1)'; this.style.transform='translateY(-2px)'"
+     onmouseout="this.style.backgroundColor='transparent'; this.style.transform='translateY(0)'">
+    Book Appointment
+  </a>
+</p>
 
     
 
@@ -425,7 +434,7 @@
 				</p>
             </div>
             <div class="ftco-footer-widget mb-5">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<h2 class="ftco-heading-2">Have any Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">Obodai Adidon Street, Ayawaso North, Accra, Ghana</span></li>
