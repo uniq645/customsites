@@ -149,20 +149,26 @@
 </nav>
 
     <!-- END nav -->
-    
-    <div id="healthSlider" class="carousel slide" data-bs-ride="carousel" style="height: 80vh; max-height: 600px; overflow: hidden;">
+    <div id="healthSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="6000" data-bs-pause="false" style="height: 80vh; max-height: 600px; overflow: hidden; background-color: #000;">
   <!-- Indicators -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#healthSlider" data-bs-slide-to="0" class="active" style="width: 12px; height: 12px; border-radius: 50%;"></button>
-    <button type="button" data-bs-target="#healthSlider" data-bs-slide-to="1" style="width: 12px; height: 12px; border-radius: 50%;"></button>
+  <div class="carousel-indicators" style="bottom: 10px;">
+    <button type="button" data-bs-target="#healthSlider" data-bs-slide-to="0" class="active" style="width: 10px; height: 10px; border-radius: 50%; border: 0; background-color: rgba(255,255,255,0.8);"></button>
+    <button type="button" data-bs-target="#healthSlider" data-bs-slide-to="1" style="width: 10px; height: 10px; border-radius: 50%; border: 0; background-color: rgba(255,255,255,0.4);"></button>
   </div>
   
   <!-- Slides -->
-  <div class="carousel-inner h-100">
+  <div class="carousel-inner h-100" style="position: relative;">
     <!-- Slide 1 -->
-    <div class="carousel-item active h-100" style="background: linear-gradient(rgba(0, 0, 0,0), rgba(0, 0, 0, 0)), url('images/bg_1.jpg') center/cover no-repeat; transition: transform 0.6s ease-in-out;">
+    <div class="carousel-item active h-100" style="
+          background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/bg_1.jpg') center/cover no-repeat;
+          position: absolute;
+          width: 100%;
+          opacity: 1;
+          transition: opacity 1.8s ease;
+          z-index: 2;
+        ">
       <div class="container h-100 d-flex align-items-center">
-        <div class="text-white animate__animated animate__fadeInLeft" style="max-width: 600px; padding: 20px; animation-delay: 0.3s;">
+        <div class="text-white" style="max-width: 600px; padding: 20px;">
           <h1 class="mb-3" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 700;">WE CARE ABOUT <span class="text-primary">YOUR HEALTH</span></h1>
           <h3 class="mb-4" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5); font-size: clamp(1rem, 2vw, 1.5rem);">Everyday We Bring Hope and Smile to the Patient We Serve</h3>
           <a href="#testmon" class="btn btn-primary px-4 py-2 mt-2" style="border-radius: 30px; transition: all 0.3s; font-size: clamp(0.9rem, 2vw, 1.1rem);">Clients Testimonials</a>
@@ -171,9 +177,16 @@
     </div>
     
     <!-- Slide 2 -->
-    <div class="carousel-item h-100" style="background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('images/bg_2.jpg') center/cover no-repeat; transition: transform 0.6s ease-in-out;">
+    <div class="carousel-item h-100" style="
+          background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('images/bg_2.jpg') center/cover no-repeat;
+          position: absolute;
+          width: 100%;
+          opacity: 0;
+          transition: opacity 1.8s ease;
+          z-index: 1;
+        ">
       <div class="container h-100 d-flex align-items-center">
-        <div class="text-white animate__animated animate__fadeInRight" style="max-width: 600px; padding: 20px; animation-delay: 0.3s;">
+        <div class="text-white" style="max-width: 600px; padding: 20px;">
           <h1 class="mb-3" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5); font-size: clamp(1.5rem, 4vw, 3rem); font-weight: 700;">PROVIDING <span class="text-primary">EXPERT AND QUALITY MEDICAL CARE</span></h1>
           <h3 class="mb-4" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.5); font-size: clamp(1rem, 2vw, 1.5rem);">Your Health is Our Top Priority with Comprehensive and Affordable Medical Services.</h3>
           <a href="./gallery-view.html" class="btn btn-primary px-4 py-2 mt-2" style="border-radius: 30px; transition: all 0.3s; font-size: clamp(0.9rem, 2vw, 1.1rem);">View Our Gallery</a>
@@ -181,29 +194,60 @@
       </div>
     </div>
   </div>
-  
-  <!-- Controls -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#healthSlider" data-bs-slide="prev" style="width: 5%;">
-    <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#healthSlider" data-bs-slide="next" style="width: 5%;">
-    <span class="carousel-control-next-icon" aria-hidden="true" style="filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.5));"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
 </div>
+
+<style>
+  /* Force black background to prevent white flash */
+  .carousel {
+    background-color: #000 !important;
+  }
+  
+  /* Enhanced fade transition */
+  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+    transition: opacity 1.8s ease !important;
+    opacity: 0 !important;
+  }
+  
+  .carousel-item {
+    transition: opacity 1.8s ease !important;
+  }
+  
+  .carousel-item-next.carousel-item-start,
+  .carousel-item-prev.carousel-item-end {
+    opacity: 1 !important;
+  }
+  
+  /* Ensure proper stacking during transitions */
+  .carousel-inner .carousel-item {
+    display: block !important;
+    position: absolute !important;
+  }
+</style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    var myCarousel = document.getElementById('healthSlider');
-    var carousel = new bootstrap.Carousel(myCarousel, {
-      interval: 5000,
+    const carousel = new bootstrap.Carousel('#healthSlider', {
+      interval: 6000, // Increased to 6 seconds
       wrap: true,
-      pause: 'hover'
+      pause: false,
+      ride: 'carousel'
     });
+    
+    // Preload images to prevent flash
+    const preloadImages = () => {
+      const images = ['images/bg_1.jpg', 'images/bg_2.jpg'];
+      images.forEach(img => {
+        new Image().src = img;
+      });
+    };
+    preloadImages();
+    
+    // Force redraw to prevent initial flash
+    document.querySelector('#healthSlider').style.visibility = 'visible';
   });
 </script>
-
+	  
     <section>
     <div class="container">
         <div class="row g-0 shadow-lg"> <!-- Added shadow container -->
