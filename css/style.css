@@ -63,6 +63,47 @@
  .media-body {
      flex-grow: 1;
  }
+ 
+ /* Fix touch scroll blocked by carousel */
+.home-slider.owl-carousel,
+.home-slider .owl-stage-outer,
+.home-slider .owl-stage {
+  touch-action: pan-y !important;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: auto !important;
+  overflow-x: hidden;
+}
+
+/* Prevent full-screen block on mobile */
+.slider-item {
+  min-height: auto !important;
+  height: auto !important;
+  padding: 4rem 0; /* Adds spacing without full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Ensure section doesn’t overflow screen height */
+@media (max-width: 768px) {
+  .home-slider {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .slider-item {
+    padding: 3rem 1rem !important;
+    height: auto !important;
+  }
+
+  .slider-text {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+}
+
+
+
 
 html {
   font-family: sans-serif;
