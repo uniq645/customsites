@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lusenac Hospital - Maintenance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #1D3557, #27496D);
+      color: #f1f1f1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      animation: fadeIn 1.5s ease;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #f4a261;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 6px 0;
+      font-size: 1rem;
+      color: #eaeaea;
+    }
+
+    .icon-wrapper {
+      margin: 30px 0;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .gear-icon {
+      width: 60px;
+      height: 60px;
+      fill: #f4a261;
+      animation: spin 4s linear infinite;
+    }
+
+    .contact {
+      margin-top: 30px;
+      font-size: 0.95rem;
+    }
+
+    .contact strong {
+      display: block;
+      margin-top: 8px;
+      color: #f4a261;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 28px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1D3557;
+      background-color: #f4a261;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #e76f51;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <!-- Hospital Branding - Left Side -->
+            <div class="me-md-auto mb-3 mb-md-0 text-center text-md-start d-flex align-items-center">
+              <!-- Logo -->
+              <a href="index.html" class="d-flex align-items-center text-decoration-none">
+                <img src="./images/lusenac-logo.jpg" alt="Lusenac Hospital Logo" style="height: 50px;" class="me-2">
+                
+                <div class="d-inline-block lh-1">
+                  <span class="d-block fw-bold" style="color: #f4f4f4; font-size: 1.6rem; line-height: 1.1;">Lusenac</span>
+                  <span class="d-block" style="font-family: 'Georgia', serif; color: #FF6B35; font-size: 1.35rem; font-weight: 600; line-height: 1;">
+                    HOSPITAL
+                  </span>
+                </div>
+              </a>
+            </div>
+    <h1>⚠️ We’re Doing Some Maintenance!</h1>
+    <p>Thank you for your patience. Back soon.</p>
+    <p><strong>Scheduled:</strong> June 6, 2025 — 2AM to 4AM GMT</p>
+
+    <div class="icon-wrapper">
+      <!-- Gear SVG Icon -->
+      <svg class="gear-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path d="M487.4 315.7l-35.6-20.6c2.2-11.1 3.4-22.7 3.4-34.4s-1.2-23.3-3.4-34.4l35.6-20.6c6.8-3.9 10.1-12 8-19.7l-19.6-67.7c-2.3-7.8-9.1-13.2-17.1-13.5l-41.4-1.6c-8.6-15.3-18.8-29.6-30.5-42.5l15.3-38.9c2.9-7.4 0.6-15.8-5.5-21.1l-54.3-45.5c-6.1-5.1-14.6-6.2-21.8-2.9L289.2 29c-16.8-4.3-34.3-6.7-52.2-6.7s-35.4 2.4-52.2 6.7l-17.6-34.5c-7.2-3.3-15.7-2.2-21.8 2.9L91 49.6c-6.1 5.3-8.3 13.7-5.5 21.1l15.3 38.9c-11.7 12.9-21.9 27.2-30.5 42.5l-41.4 1.6c-8 .3-14.8 5.7-17.1 13.5L1.6 186.1c-2.1 7.7 1.2 15.8 8 19.7l35.6 20.6c-2.2 11.1-3.4 22.7-3.4 34.4s1.2 23.3 3.4 34.4L9.6 315.7c-6.8 3.9-10.1 12-8 19.7l19.6 67.7c2.3 7.8 9.1 13.2 17.1 13.5l41.4 1.6c8.6 15.3 18.8 29.6 30.5 42.5l-15.3 38.9c-2.9 7.4-.6 15.8 5.5 21.1l54.3 45.5c6.1 5.1 14.6 6.2 21.8 2.9l34.5-17.6c16.8 4.3 34.3 6.7 52.2 6.7s35.4-2.4 52.2-6.7l34.5 17.6c7.2 3.3 15.7 2.2 21.8-2.9l54.3-45.5c6.1-5.3 8.3-13.7 5.5-21.1l-15.3-38.9c11.7-12.9 21.9-27.2 30.5-42.5l41.4-1.6c8-.3 14.8-5.7 17.1-13.5l19.6-67.7c2.1-7.7-1.2-15.8-8-19.7zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"/>
+      </svg>
+    </div>
+
+    <div class="contact">
+      Need help? Call <strong>+233 244 385 803</strong> or email us.
+      <br />
+      <a href="mailto:lusenachospital@gmail.com" class="button">Contact Us</a>
+    </div>
+  </div>
+</body>
+</html>
